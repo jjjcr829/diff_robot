@@ -17,8 +17,7 @@ sudo apt install -y \
   ros-humble-teleop-twist-keyboard
 ```
 
-> 这台 ThinkPad X250 性能有限，运行前建议关闭 VSCode、浏览器等占 CPU 的程序；
-> 不截图时可用 `gui:=false` 只跑 gzserver，能明显提高实时率。
+
 
 ## 2. 工作空间与编译
 
