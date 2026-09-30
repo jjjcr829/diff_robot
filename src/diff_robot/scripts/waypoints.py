@@ -72,13 +72,17 @@ def main():
 
     navigator.followWaypoints(poses)
 
-    last_index = -1
+    last_index = 0
+    navigator.get_logger().info(f'正在前往第 1/{len(poses)} 个目标点')
     while not navigator.isTaskComplete():
         feedback = navigator.getFeedback()
         if feedback is not None and feedback.current_waypoint != last_index:
-            last_index = feedback.current_waypoint
             navigator.get_logger().info(
-                f'正在前往第 {last_index + 1}/{len(poses)} 个目标点')
+                f'第 {last_index + 1} 个目标点已到达')
+            last_index = feedback.current_waypoint
+            if last_index + 1 <= len(poses):
+                navigator.get_logger().info(
+                    f'正在前往第 {last_index + 1}/{len(poses)} 个目标点')
         time.sleep(0.2)
 
     result = navigator.getResult()
