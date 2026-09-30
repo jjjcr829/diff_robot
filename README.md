@@ -181,7 +181,7 @@ ros2 run diff_robot waypoints.py \
 导航 launch 会自动启动 `parking_zone_publisher`，在 `map` 坐标系发布 `/parking_zone`
 深蓝色标记（右上角 `(3.27, 1.35)`，0.55m × 0.51m = 车长宽各 +0.25m）；
 RViz 的 `ParkingZone` 显示已配置好。机器人出生点与最后一个航点都在该区域内，
-goal checker 容差 0.08m/0.12rad（满足 ≤0.25m / 15°）。
+goal checker 容差 0.15m/0.20rad（满足 ≤0.25m / 15°）。
 
 ### 4.7 一键执行分段导航
 
